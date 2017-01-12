@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>List of Blogs</title>
+</head>
+<body>
+<div>
+		<p>
+			Search:<input type="text" ng-model="test">
+		</p>
+		<table class="table table-striped">
+			<tr>
+				<th>Blog Id</th>
+				<th>Blog Name</th>
+				<th>UserID</th>
+				<th>Blog Description</th>
+				<th>Status</th>
+				<th>Create Date</th>
+				<th>Comments</th>
+
+			</tr>
+			<tr ng-repeat="value in blogs| filter:test">
+				<td>{{value.blogid}}</td>
+				<td>{{value.blogname}}</td>
+				<td>{{value.userId}}</td>
+				<td>{{value.blogDescription}}</td>
+				<td>{{value.status}}</td>
+				<td>{{value.createddate}}</td>
+				<td>{{value.blogComments}}</td>
+				<td ng-show="currentUser.role=='Admin'"><a
+					href="#/editBlog?id={{value.blogid}}">Edit</a> &nbsp;&nbsp; <a
+					href="" ng-click="deleteBlog(value.blogid)"
+					class="btn btn-xs btn-default"> <span
+						class="glyphicon glyphicon-trash"></span></a></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Create New Job</title>
+</head>
+<body>
+	<form>
+		<table>
+			<tr>
+				<td>Job Title</td>
+				<td><input type="text" ng-model="job.jobTitle"></td>
+			</tr>
+			<tr>
+				<td>Job Description</td>
+				<td><textarea ng-model="job.jobDescription"></textarea></td>
+			</tr>
+
+			<tr>
+				<td>Skills Required</td>
+				<td><input type="text" ng-model="job.skillsRequired"></td>
+			</tr>
+
+			<tr>
+				<td>Salary</td>
+				<td><input type="text" ng-model="job.salary"></td>
+			</tr>
+
+			<tr>
+				<td>location</td>
+				<td><input type="text" ng-model="job.location"></td>
+			</tr>
+			
+			<tr>
+				<td>Posted On [dd/mm/yyyy]</td>
+				<td><input type="text" ng-model="job.postedOn"></td>
+			</tr>
+<tr>
+				<td>Validity[In days]</td>
+				<td><input type="text" ng-model="job.validity"></td>
+			</tr>
+			
+			<tr>
+				<td>Select role</td>
+				<td><input type="radio" ng-model="user.role" value="Approved">Approved
+					<input type="radio" ng-model="user.role" value="Pending">Pending
+					<input type="radio" ng-model="user.role" value="Rejected">Rejected</td>
+			</tr>	
+			
+			
+			<tr>
+				<td><input type="submit" value="Post Job" ng-click="saveJob()">
+				</td>
+			</tr>
+		</table>
+		
+	</form>
+</body>
+</html>
